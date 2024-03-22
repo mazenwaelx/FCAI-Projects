@@ -17,8 +17,14 @@ void insertionSortLinear(int arr[], int size)
             arr[j + 1] = arr[j];
             --j;
             ++shifts;
+        
+
         }
-        ++comparisons;
+        if (j>= 0) {
+
+            comparisons++;
+        }
+
         arr[j + 1] = key;
 
         }
@@ -179,7 +185,7 @@ void shellSort(int arr[], int n, int & comparisons, int & swapss)
             while (j >= gap && arr[j - gap] > temp)
             {
                 comparisons++;
-                swapss++;
+                swapss++;   
                 arr[j] = arr[j - gap];
                 j -= gap;
 
